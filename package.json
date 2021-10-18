@@ -1,0 +1,11 @@
+{
+  "name": "semanticcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "cd docs && yarn && yarn storybook"
+  },
+  "author": "Abeid Ahmed",
+  "license": "MIT"
+}
