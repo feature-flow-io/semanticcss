@@ -38,6 +38,7 @@ label {
 
 textarea.form-control {
   line-height: $lh-default;
+  resize: vertical;
 }
 
 .input-contrast {
