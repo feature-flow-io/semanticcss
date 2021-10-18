@@ -1,3 +1,4 @@
-.storybook-button--primary {
-  color: red;
-}
+@import 'mode/all';
+@import 'variables/all';
+@import 'mixins/all';
+@import 'base/all';
