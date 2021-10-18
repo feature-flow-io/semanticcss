@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "storybook": "cd docs && yarn && yarn storybook"
+    "storybook": "cd docs && yarn && yarn storybook",
+    "setup": "yarn && cd docs && yarn"
   },
   "author": "Abeid Ahmed",
   "license": "MIT",
