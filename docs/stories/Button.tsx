@@ -1,21 +1,35 @@
 interface ButtonProps {
-  primary?: boolean
-  backgroundColor?: string
-  size?: 'small' | 'medium' | 'large'
+  scheme?: 'default' | 'primary' | 'danger'
+  size?: 'sm' | 'md'
   label: string
+  disabled?: boolean
+  block?: boolean
   onClick?: () => void
 }
 
-export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
+function joinClasses(classes: Array<string | boolean>) {
+  return classes.filter(Boolean).join(' ')
+}
+
+export const Button = ({ scheme, size = 'md', label, disabled = false, block = false, ...props }: ButtonProps) => {
+  let mode: string = ''
+  if (scheme === 'primary') {
+    mode = 'btn--primary'
+  } else if (scheme === 'danger') {
+    mode = 'btn--danger'
+  } else {
+    mode = ''
+  }
+
+  const blockClass = block && 'btn--block'
+
+  let sizeClass: string = ''
+  if (size === 'sm') {
+    sizeClass = 'btn--sm'
+  }
 
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <button type="button" className={joinClasses(['btn', sizeClass, mode, blockClass])} disabled={disabled} {...props}>
       {label}
     </button>
   )

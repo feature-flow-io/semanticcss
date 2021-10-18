@@ -1,0 +1,187 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px $spacer-3;
+  font-size: $body-font-size;
+  font-weight: $font-weight-semibold;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $border-width $border-style;
+  border-radius: $border-radius;
+  appearance: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.disabled,
+  &[aria-disabled='true'] {
+    cursor: default;
+  }
+
+  .dropdown-caret {
+    margin-left: $spacer-1;
+    opacity: 0.8;
+  }
+}
+
+// Default button
+.btn {
+  --color-btn-text: var(--color-gray-900);
+  --color-btn-bg: #fff;
+  --color-btn-border: var(--color-gray-300);
+  --color-btn-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  --color-btn-inset-shadow: 0 -1px 0 rgba(0, 0, 0, 0.02);
+  --color-btn-hover-bg: var(--color-gray-50);
+  --color-btn-active-bg: var(--color-gray-100);
+  --color-btn-disabled-bg: var(--color-gray-50);
+  --color-btn-disabled-text: var(--color-gray-400);
+  --color-btn-disabled-border: var(--color-gray-200);
+  --color-btn-focus-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
+  --color-btn-focus-border: var(--color-purple-600);
+
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-bg);
+  border-color: var(--color-btn-border);
+  box-shadow: var(--color-btn-shadow), var(--color-btn-inset-shadow);
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+
+  &:hover,
+  &.hover,
+  [open] > & {
+    background-color: var(--color-btn-hover-bg);
+    transition-duration: 0.1s;
+  }
+
+  &:active {
+    background-color: var(--color-btn-active-bg);
+    transition: none;
+  }
+
+  &.selected,
+  &[aria-selected='true'] {
+    background-color: var(--color-btn-selected-bg);
+  }
+
+  &:disabled,
+  &.disabled,
+  &[aria-disabled='true'] {
+    color: var(--color-fg-muted);
+    background-color: var(--color-btn-bg);
+    border-color: var(--color-btn-border);
+  }
+
+  // Keep :focus after :disabled. Allows to see the focus ring even on disabled buttons
+  &:focus,
+  &.focus {
+    outline: none;
+    box-shadow: var(--color-btn-focus-shadow);
+  }
+}
+
+// Primary button
+.btn--primary {
+  --color-btn-primary-text: #fff;
+  --color-btn-primary-bg: var(--color-purple-500);
+  --color-btn-primary-border: var(--color-purple-500);
+  --color-btn-primary-shadow: 0 1px 0 rgba(102, 57, 186, 0.05);
+  --color-btn-primary-hover-bg: var(--color-purple-600);
+  --color-btn-primary-active-bg: var(--color-purple-500);
+  --color-btn-primary-disabled-bg: var(--color-purple-200);
+  --color-btn-primary-disabled-text: #fff;
+  --color-btn-primary-disabled-border: var(--color-purple-300);
+  --color-btn-primary-focus-bg: var(--color-purple-500);
+  --color-btn-primary-focus-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
+  --color-btn-primary-focus-border: var(--color-purple-500);
+
+  color: var(--color-btn-primary-text);
+  background-color: var(--color-btn-primary-bg);
+  border-color: var(--color-btn-primary-border);
+
+  &:hover,
+  &.hover,
+  [open] > & {
+    background-color: var(--color-btn-primary-hover-bg);
+  }
+
+  &:active,
+  &.selected,
+  &[aria-selected='true'] {
+    background-color: var(--color-btn-primary-selected-bg);
+  }
+
+  &:disabled,
+  &.disabled,
+  &[aria-disabled='true'] {
+    color: var(--color-btn-primary-disabled-text);
+    background-color: var(--color-btn-primary-disabled-bg);
+    border-color: var(--color-btn-primary-disabled-border);
+  }
+
+  &:focus,
+  &.focus {
+    background-color: var(--color-btn-primary-focus-bg);
+    border-color: var(--color-btn-primary-focus-border);
+    box-shadow: var(--color-btn-primary-focus-shadow);
+  }
+}
+
+// Danger button
+.btn--danger {
+  --color-btn-danger-text: var(--color-red-600);
+  --color-btn-danger-hover-text: #fff;
+  --color-btn-danger-hover-bg: var(--color-red-600);
+  --color-btn-danger-hover-border: var(--color-red-600);
+  --color-btn-danger-active-bg: var(--color-red-500);
+  --color-btn-border: var(--color-gray-300);
+  --color-btn-danger-disabled-text: var(--color-red-200);
+  --color-btn-danger-focus-shadow: 0 0 0 3px rgba(164, 14, 38, 0.3);
+
+  color: var(--color-btn-danger-text);
+
+  &:hover,
+  [open] > & {
+    color: var(--color-btn-danger-hover-text);
+    background-color: var(--color-btn-danger-hover-bg);
+    border-color: var(--color-btn-danger-hover-border);
+  }
+
+  &:active,
+  &.selected,
+  &[aria-selected='true'] {
+    background-color: var(--color-btn-danger-active-bg);
+    color: var(--color-btn-danger-hover-text);
+    border-color: var(--color-btn-danger-hover-border);
+  }
+
+  &:disabled,
+  &.disabled,
+  &[aria-disabled='true'] {
+    color: var(--color-btn-danger-disabled-text);
+    background-color: var(--color-btn-danger-disabled-bg);
+    border-color: var(--color-btn-border);
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: var(--color-btn-danger-focus-shadow);
+  }
+}
+
+// Sizes
+.btn--sm {
+  padding: 4px 12px;
+  font-size: $body-font-size;
+  line-height: 20px;
+}
+
+.btn--block {
+  width: 100%;
+}
