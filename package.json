@@ -1,16 +1,22 @@
 {
-  "name": "semanticcss",
+  "name": "featureflow-semanticcss",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "storybook": "cd docs && yarn && yarn storybook",
     "setup": "yarn && cd docs && yarn",
-    "build": "postcss ./src/index.scss -o ./dist/index.css --config postcss.config.js"
+    "build": "postcss ./src/index.scss -o ./dist/index.css --config postcss.config.js",
+    "release": "yarn build && npm publish"
   },
   "files": [
     "dist/index.css",
     "dist/index.css.map"
+  ],
+  "keywords": [
+    "css",
+    "design-system",
+    "featureflow"
   ],
   "author": "Abeid Ahmed",
   "license": "MIT",
@@ -23,5 +29,8 @@
     "postcss-scss": "^4.0.1",
     "prettier": "^2.4.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
 }
