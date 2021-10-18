@@ -6,8 +6,7 @@
   "scripts": {
     "storybook": "cd docs && yarn && yarn storybook",
     "setup": "yarn && cd docs && yarn",
-    "build": "postcss ./src/index.scss -o ./dist/index.css --config postcss.config.js",
-    "release": "yarn build && npm publish"
+    "release": "npm publish"
   },
   "files": [
     "src"
@@ -20,12 +19,6 @@
   "author": "Abeid Ahmed",
   "license": "MIT",
   "devDependencies": {
-    "@koddsson/postcss-sass": "^5.0.0",
-    "autoprefixer": "^10.3.7",
-    "postcss": "^8.3.9",
-    "postcss-cli": "^9.0.1",
-    "postcss-import": "^14.0.2",
-    "postcss-scss": "^4.0.1",
     "prettier": "^2.4.1"
   },
   "dependencies": {},
