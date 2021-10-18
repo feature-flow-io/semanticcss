@@ -34,3 +34,6 @@ docs/.env.production.local
 docs/.vercel
 
 node_modules
+
+# ignore build files
+dist/
