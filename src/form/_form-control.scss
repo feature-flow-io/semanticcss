@@ -36,6 +36,10 @@ label {
   }
 }
 
+textarea.form-control {
+  line-height: $lh-default;
+}
+
 .input-contrast {
   background-color: var(--color-canvas-muted-light);
 
