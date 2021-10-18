@@ -7,4 +7,9 @@
   --color-fg-muted: var(--color-gray-500);
   // Background
   --color-canvas-default: #fff;
+  --color-canvas-muted: var(--color-gray-100);
+  --color-canvas-muted-emphasis: var(--color-gray-200);
+  --color-canvas-overlay: rgba(46, 20, 97, 0.5);
+  // Box-shadow
+  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }

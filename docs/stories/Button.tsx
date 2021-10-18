@@ -1,3 +1,5 @@
+import { joinClasses } from '../utils'
+
 interface ButtonProps {
   scheme?: 'default' | 'primary' | 'danger'
   size?: 'sm' | 'md'
@@ -5,10 +7,6 @@ interface ButtonProps {
   disabled?: boolean
   block?: boolean
   onClick?: () => void
-}
-
-function joinClasses(classes: Array<string | boolean>) {
-  return classes.filter(Boolean).join(' ')
 }
 
 export const Button = ({ scheme, size = 'md', label, disabled = false, block = false, ...props }: ButtonProps) => {
