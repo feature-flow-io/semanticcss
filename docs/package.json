@@ -11,15 +11,19 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.7",
     "next": "11.1.2",
+    "postcss-node-sass": "^3.1.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass-loader": "^10"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.3.12",
     "@types/react": "17.0.30",
     "babel-loader": "^8.2.2",
