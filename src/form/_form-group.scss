@@ -1,0 +1,17 @@
+.form-group {
+  &:not(:first-of-type) {
+    margin-top: 15px;
+  }
+
+  .form-control {
+    background-color: var(--color-fg-muted-light);
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  .form-group-header {
+    margin-bottom: $spacer-1;
+  }
+}

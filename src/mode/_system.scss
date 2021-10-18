@@ -1,6 +1,9 @@
 :root {
   // Border
   --color-border-default: var(--color-gray-300);
+  --color-border-primary: var(--color-purple-500);
+  --color-border-success: var(--color-green-600);
+  --color-border-danger: var(--color-red-500);
   // Text
   --color-fg-default: var(--color-gray-900);
   --color-fg-default-inverse: var(--color-gray-100);
@@ -8,6 +11,7 @@
   --color-fg-muted: var(--color-gray-500);
   // Background
   --color-canvas-default: #fff;
+  --color-canvas-muted-light: var(--color-gray-50);
   --color-canvas-muted: var(--color-gray-100);
   --color-canvas-muted-emphasis: var(--color-gray-200);
   --color-canvas-overlay: rgba(46, 20, 97, 0.5);

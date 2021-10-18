@@ -1,0 +1,65 @@
+label {
+  font-weight: $font-weight-bold;
+}
+
+.form-control {
+  --color-input-primary-focus-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
+
+  display: block;
+  width: 100%;
+  padding: 5px 12px;
+  font-size: $body-font-size;
+  line-height: 20px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: $border-width $border-style var(--color-border-default);
+  border-radius: $border-radius;
+  outline: none;
+
+  &:focus,
+  .focus {
+    border-color: var(--color-border-primary);
+    box-shadow: var(--color-input-primary-focus-shadow);
+    outline: none;
+  }
+
+  // Ensures inputs don't zoom on mobile iPhone but are body-font size on iPad
+  @supports (-webkit-touch-callout: none) {
+    font-size: $h4-size;
+
+    @include breakpoint(md) {
+      font-size: $body-font-size;
+    }
+  }
+}
+
+.input-contrast {
+  background-color: var(--color-canvas-muted-light);
+
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+// Sizes
+.form-control--sm {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+::placeholder {
+  opacity: 1;
+  color: var(--color-fg-muted);
+}
+
+// Hide the up/down buttons in <input type="number"> in the login form, the
+// input is used for two-factor auth codes, type="number" makes it more usable
+// on phones
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
