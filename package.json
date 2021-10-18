@@ -1,6 +1,6 @@
 {
   "name": "featureflow-semanticcss",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,7 @@
     "release": "yarn build && npm publish"
   },
   "files": [
-    "dist/index.css",
-    "dist/index.css.map"
+    "./src/**/*.scss"
   ],
   "keywords": [
     "css",
