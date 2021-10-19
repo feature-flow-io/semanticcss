@@ -1,0 +1,35 @@
+.label {
+  border-radius: $border-radius;
+  line-height: 18px;
+  padding: 1px 7px;
+  font-size: $h6-size;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  background-color: var(--color-canvas-muted);
+  color: var(--color-fg-muted-emphasis);
+}
+
+.label--circle {
+  border-radius: 2em;
+}
+
+// Schemes
+.label--success {
+  background-color: var(--color-green-100);
+  color: var(--color-green-700);
+}
+
+.label--warning {
+  background-color: var(--color-yellow-100);
+  color: var(--color-yellow-700);
+}
+
+.label--danger {
+  background-color: var(--color-red-50);
+  color: var(--color-red-700);
+}
+
+.label--info {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-700);
+}
