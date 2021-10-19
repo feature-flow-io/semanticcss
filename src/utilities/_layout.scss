@@ -1,0 +1,30 @@
+// Positions
+$position-map: (relative, absolute, static);
+
+@each $breakpoint in map-keys($breakpoints) {
+  $variant: breakpoint-infix($breakpoint);
+
+  @include breakpoint($breakpoint) {
+    @each $position in $position-map {
+      .#{$variant}#{$position} {
+        position: $position !important;
+      }
+    }
+  }
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.left-0 {
+  left: 0 !important;
+}
+
+.right-0 {
+  right: 0 !important;
+}

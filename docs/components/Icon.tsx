@@ -1,5 +1,8 @@
+import { joinClasses } from '../utils'
+
 interface IconProps {
   icon?: string
+  className?: string
 }
 
 const Glyph = ({ icon }: IconProps): JSX.Element | null => {
@@ -28,9 +31,16 @@ const Glyph = ({ icon }: IconProps): JSX.Element | null => {
   }
 }
 
-export const Icon = ({ icon, ...props }: IconProps) => {
+export const Icon = ({ icon, className, ...props }: IconProps) => {
   return (
-    <svg fill="currentColor" viewBox="0 0 24 24" {...props} height={20} width={20} className="octicon">
+    <svg
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      {...props}
+      height={20}
+      width={20}
+      className={joinClasses(['octicon', className])}
+    >
       <Glyph icon={icon} />
     </svg>
   )

@@ -1,0 +1,13 @@
+$display-map: (inline, inline-flex, flex, block, inline-block, grid, none);
+
+@each $breakpoint in map-keys($breakpoints) {
+  $variant: breakpoint-infix($breakpoint);
+
+  @include breakpoint($breakpoint) {
+    @each $display in $display-map {
+      .d-#{$variant}#{$display} {
+        display: $display !important;
+      }
+    }
+  }
+}
