@@ -1,0 +1,13 @@
+.avatar-stack {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  > * + * {
+    margin-left: -$spacer-1;
+  }
+
+  .avatar {
+    box-shadow: 0 0 0 2px #fff;
+  }
+}
