@@ -1,0 +1,43 @@
+.form-radio {
+  appearance: none;
+  color-adjust: exact;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  user-select: none;
+  flex-shrink: 0;
+  border-radius: 100%;
+  height: $size-1;
+  width: $size-1;
+  color: var(--color-fg-default);
+  background-color: #fff;
+  border-color: var(--color-gray-500);
+  border-width: $border-width;
+  border-style: $border-style;
+  margin: 0;
+}
+
+.form-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  border-color: transparent;
+  background-color: var(--color-purple-600);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media not print {
+  .form-radio::-ms-check {
+    border-width: 1px;
+    color: transparent;
+    background: inherit;
+    border-color: inherit;
+    border-radius: inherit;
+  }
+}
+
+.form-radio:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
+  border-color: var(--color-border-primary);
+}

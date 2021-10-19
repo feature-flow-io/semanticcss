@@ -16,14 +16,16 @@
   }
 }
 
-.form-group-checkbox {
+.form-group-checkbox,
+.form-group-radio {
   label {
     display: inline-flex;
     align-items: center;
     line-height: 20px;
   }
 
-  input[type='checkbox'] {
+  input[type='checkbox'],
+  input[type='radio'] {
     margin-right: $spacer-2;
   }
 
