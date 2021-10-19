@@ -1,0 +1,23 @@
+.link--primary {
+  color: var(--color-fg-default);
+
+  &:hover {
+    color: var(--color-fg-accent);
+  }
+}
+
+.link--secondary {
+  color: var(--color-fg-muted-emphasis);
+
+  &:hover {
+    color: var(--color-fg-accent);
+  }
+}
+
+.link--muted {
+  color: var(--color-fg-muted);
+
+  &:hover {
+    color: var(--color-fg-accent);
+  }
+}
