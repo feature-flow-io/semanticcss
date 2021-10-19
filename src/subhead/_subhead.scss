@@ -1,0 +1,17 @@
+.subhead {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.subhead-heading {
+  font-size: $h3-size;
+  font-weight: $font-weight-bold;
+  flex: 1 1 auto;
+}
+
+.subhead-description {
+  font-size: $body-font-size;
+  color: var(--color-fg-muted);
+  flex: 1 100%;
+  font-weight: $font-weight-normal;
+}
