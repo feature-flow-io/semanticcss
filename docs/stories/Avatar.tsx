@@ -7,13 +7,6 @@ interface AvatarProps {
   circle?: boolean
 }
 
-export const Avatar = ({ src, alt, size, circle, ...props }: AvatarProps) => {
-  return (
-    <img
-      className={joinClasses(['avatar', `avatar--${size}`, circle && 'avatar--circle'])}
-      src={src}
-      alt={alt}
-      {...props}
-    />
-  )
+export const Avatar = ({ size, circle, ...props }: AvatarProps) => {
+  return <img className={joinClasses(['avatar', `avatar--${size}`, circle && 'avatar--circle'])} {...props} />
 }
