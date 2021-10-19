@@ -1,0 +1,25 @@
+.progress {
+  display: flex;
+  height: 8px;
+  overflow: hidden;
+  border-radius: $border-radius;
+  background-color: var(--color-canvas-muted);
+  outline: 1px solid transparent;
+}
+
+.progress-item {
+  outline: 2px solid transparent;
+}
+
+.progress-item + .progress-item {
+  margin-left: 2px;
+}
+
+// Size
+.progress--sm {
+  height: 5px;
+}
+
+.progress--lg {
+  height: 10px;
+}
