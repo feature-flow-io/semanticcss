@@ -12,6 +12,16 @@ $spacer-6: $spacer * 5; // 40px
 // The list of spacer values
 $spacers: ($spacer-0, $spacer-1, $spacer-2, $spacer-3, $spacer-4, $spacer-5, $spacer-6);
 
+$spacer-map: (
+  0: $spacer-0,
+  1: $spacer-1,
+  2: $spacer-2,
+  3: $spacer-3,
+  4: $spacer-4,
+  5: $spacer-5,
+  6: $spacer-6,
+);
+
 // Em spacer variables
 $em-spacer-1: 0.0625em; // 1/16
 $em-spacer-2: 0.125em; // 1/8

@@ -19,4 +19,6 @@ Base.args = {
   scheme: 'default',
   size: 'md',
   label: 'Sign up',
+  disabled: false,
+  block: false,
 }

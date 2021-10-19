@@ -1,0 +1,59 @@
+.spinner,
+.spinner::after {
+  border-radius: 50%;
+  width: $size-5;
+  height: $size-5;
+}
+
+.spinner {
+  --spinner-border: 3px solid rgba(0, 0, 0, 0.15);
+  --spinner-border-active: 3px solid var(--color-gray-500);
+
+  margin: $spacer-3 auto;
+  position: relative;
+  text-indent: -9999em;
+  border-top: var(--spinner-border);
+  border-right: var(--spinner-border);
+  border-bottom: var(--spinner-border);
+  border-left: var(--spinner-border-active);
+  transform: translateZ(0);
+  animation: rotate 0.8s linear infinite;
+}
+
+// Sizes
+.spinner--sm {
+  &.spinner {
+    margin-top: $spacer-2;
+    margin-bottom: $spacer-2;
+  }
+
+  &.spinner,
+  &.spinner::after {
+    width: $size-3;
+    height: $size-3;
+  }
+}
+
+.spinner--lg {
+  &.spinner {
+    margin-top: $spacer-5;
+    margin-bottom: $spacer-5;
+  }
+
+  &.spinner,
+  &.spinner::after {
+    width: $size-6;
+    height: $size-6;
+  }
+}
+
+// Animation
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

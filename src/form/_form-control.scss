@@ -1,0 +1,94 @@
+label {
+  font-weight: $font-weight-bold;
+}
+
+.form-control,
+.form-select {
+  --color-input-primary-focus-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
+
+  display: block;
+  width: 100%;
+  padding: 5px 12px;
+  font-size: $body-font-size;
+  line-height: 20px;
+  color: var(--color-fg-default);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: $border-width $border-style var(--color-border-default);
+  border-radius: $border-radius;
+  outline: none;
+
+  &:focus,
+  .focus {
+    border-color: var(--color-border-primary);
+    box-shadow: var(--color-input-primary-focus-shadow);
+    outline: none;
+  }
+
+  // Ensures inputs don't zoom on mobile iPhone but are body-font size on iPad
+  @supports (-webkit-touch-callout: none) {
+    font-size: $h4-size;
+
+    @include breakpoint(md) {
+      font-size: $body-font-size;
+    }
+  }
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' style='color: %23475569' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z'/%3E%3C/svg%3E");
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 24px;
+  padding-right: $spacer-5;
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+
+  &[multiple] {
+    height: auto;
+  }
+}
+
+.form-select--sm {
+  padding-top: $spacer-1;
+  padding-bottom: $spacer-1;
+}
+
+textarea.form-control {
+  line-height: $lh-default;
+  resize: vertical;
+}
+
+.input-contrast {
+  background-color: var(--color-canvas-muted-light);
+
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+// Sizes
+.form-control--sm {
+  padding-top: $spacer-1;
+  padding-bottom: $spacer-1;
+}
+
+::placeholder {
+  opacity: 1;
+  color: var(--color-fg-muted);
+}
+
+// Hide the up/down buttons in <input type="number"> in the login form, the
+// input is used for two-factor auth codes, type="number" makes it more usable
+// on phones
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}

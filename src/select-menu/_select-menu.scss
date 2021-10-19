@@ -1,0 +1,209 @@
+$select-menu-height: 376px !default;
+
+.select-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  padding: $spacer-3;
+  pointer-events: none;
+  flex-direction: column;
+
+  @include breakpoint(sm) {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    padding: 0;
+  }
+}
+
+.select-menu::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  content: '';
+  background-color: var(--color-canvas-overlay);
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
+.select-menu-modal {
+  position: relative;
+  z-index: 99; // Needs to be higher than .details-overlay's z-index: 80.
+  display: flex;
+  max-height: 66%;
+  margin: auto 0;
+  overflow: hidden; // Enables border radius on scrollable child elements
+  pointer-events: auto;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: $border-radius * 2;
+  border: $border;
+  box-shadow: var(--color-shadow-lg);
+  animation: select-menu-modal-animation 0.12s cubic-bezier(0, 0.1, 0.1, 1) backwards;
+
+  @keyframes select-menu-modal-animation {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  }
+
+  @keyframes select-menu-modal-animation--sm {
+    0% {
+      opacity: 0;
+      transform: translateY(-$spacer-3);
+    }
+  }
+
+  @include breakpoint(sm) {
+    width: 300px;
+    height: auto;
+    max-height: $select-menu-height;
+    margin: $spacer-2 0 $spacer-3 0;
+    font-size: $body-font-size;
+    background-color: #fff;
+    border-radius: $border-radius;
+    animation-name: select-menu-modal-animation--sm;
+  }
+}
+
+// Header
+.select-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacer-3;
+  border-bottom: $border;
+
+  @include breakpoint(sm) {
+    padding: 7px 7px 7px $spacer-3;
+  }
+}
+
+.select-menu-title {
+  flex: 1;
+  font-size: $body-font-size;
+  font-weight: $font-weight-bold;
+
+  @include breakpoint(sm) {
+    font-size: $h6-size;
+  }
+}
+
+.select-menu-close {
+  padding: $spacer-3;
+  margin: -$spacer-3;
+  line-height: 1;
+  color: var(--color-fg-muted);
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    color: var(--color-fg-default);
+  }
+
+  @include breakpoint(sm) {
+    padding: $spacer-2;
+    margin: -$spacer-2 -7px; // Using -7px fixes a :focus glitch
+  }
+}
+
+.select-menu-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -$border-width; // Hides the last border in the list
+  flex: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch; // Adds momentum + bouncy scrolling
+}
+
+.select-menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $spacer-3;
+  overflow: hidden;
+  color: var(--color-fg-default);
+  text-align: left;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  border-bottom: $border-width $border-style var(--color-border-default);
+
+  &:hover {
+    background-color: var(--color-canvas-muted);
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+// Filter
+.select-menu-filter {
+  padding: $spacer-3;
+  border-bottom: $border;
+
+  .form-control {
+    background-color: var(--color-canvas-muted-light);
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: $spacer-2;
+  }
+}
+
+// Footer
+.select-menu-footer {
+  z-index: 0; // Avoid top border from getting covered by the negative margin of the list
+  padding: $spacer-2 $spacer-3;
+  font-size: $font-size-small;
+  color: var(--color-fg-muted);
+  text-align: center;
+  border-top: $border-width $border-style var(--color-border-muted);
+
+  @include breakpoint(sm) {
+    padding: 7px $spacer-3;
+  }
+}
+
+// Icon
+.select-menu-check {
+  width: $spacer-3;
+  margin-right: $spacer-2;
+  flex-shrink: 0;
+  visibility: hidden;
+  transition: transform 0.12s cubic-bezier(0.5, 0.1, 1, 0.5), visibility 0s 0.12s linear;
+  transform: scale(0);
+  color: var(--color-green-700);
+}
+
+// Selected state
+.select-menu-item[aria-checked='true'] {
+  font-weight: $font-weight-semibold;
+
+  .select-menu-check {
+    visibility: visible;
+    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), visibility 0s linear;
+    transform: scale(1);
+  }
+}

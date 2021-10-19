@@ -1,0 +1,44 @@
+.form-group {
+  &:not(:first-of-type) {
+    margin-top: 15px;
+  }
+
+  .form-control {
+    background-color: var(--color-fg-muted-light);
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  .form-group-header {
+    margin-bottom: $spacer-1;
+  }
+}
+
+.form-group-checkbox,
+.form-group-radio {
+  label {
+    display: inline-flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    margin-right: $spacer-2;
+  }
+
+  .note {
+    padding-left: $spacer-4;
+    margin-top: 0;
+  }
+}
+
+.note {
+  margin-top: 2px;
+  color: var(--color-fg-muted);
+  font-size: $h6-size;
+  display: block;
+  font-weight: $font-weight-normal;
+}
