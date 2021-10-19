@@ -2,7 +2,8 @@ label {
   font-weight: $font-weight-bold;
 }
 
-.form-control {
+.form-control,
+.form-select {
   --color-input-primary-focus-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
 
   display: block;
@@ -35,6 +36,30 @@ label {
   }
 }
 
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' style='color: %23475569' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z'/%3E%3C/svg%3E");
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 24px;
+  padding-right: $spacer-5;
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+
+  &[multiple] {
+    height: auto;
+  }
+}
+
+.form-select--sm {
+  padding-top: $spacer-1;
+  padding-bottom: $spacer-1;
+}
+
 textarea.form-control {
   line-height: $lh-default;
   resize: vertical;
@@ -50,8 +75,8 @@ textarea.form-control {
 
 // Sizes
 .form-control--sm {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: $spacer-1;
+  padding-bottom: $spacer-1;
 }
 
 ::placeholder {
