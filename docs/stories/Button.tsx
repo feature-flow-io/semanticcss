@@ -6,10 +6,9 @@ interface ButtonProps {
   label: string
   disabled?: boolean
   block?: boolean
-  onClick?: () => void
 }
 
-export const Button = ({ scheme, size = 'md', label, disabled = false, block = false, ...props }: ButtonProps) => {
+export const Button = ({ scheme, size, label, disabled, block, ...props }: ButtonProps) => {
   let mode: string = ''
   if (scheme === 'primary') {
     mode = 'btn--primary'
@@ -20,11 +19,7 @@ export const Button = ({ scheme, size = 'md', label, disabled = false, block = f
   }
 
   const blockClass = block && 'btn--block'
-
-  let sizeClass: string = ''
-  if (size === 'sm') {
-    sizeClass = 'btn--sm'
-  }
+  const sizeClass = size === 'sm' && 'btn--sm'
 
   return (
     <button type="button" className={joinClasses(['btn', sizeClass, mode, blockClass])} disabled={disabled} {...props}>

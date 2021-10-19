@@ -6,7 +6,7 @@ interface DropdownProps {
   icon?: boolean
 }
 
-export const Dropdown = ({ direction = 'se', icon = false }: DropdownProps) => {
+export const Dropdown = ({ direction, icon }: DropdownProps) => {
   let directionClass: string = ''
   if (direction === 'se') {
     directionClass = ''

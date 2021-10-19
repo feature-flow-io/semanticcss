@@ -15,4 +15,5 @@ Base.parameters = {
 
 Base.args = {
   direction: 'se',
+  icon: false,
 }
