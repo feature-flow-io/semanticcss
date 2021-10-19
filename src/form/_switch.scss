@@ -1,0 +1,60 @@
+.switch {
+  --knob-size: 20px;
+
+  appearance: none;
+  height: 24px;
+  width: 40px;
+  border-radius: 999px;
+  background-color: var(--color-canvas-muted-emphasis);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border: $border-width $border-style transparent;
+  outline: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: var(--knob-size);
+    width: var(--knob-size);
+    border-radius: 999px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1px;
+    background-color: #fff;
+    box-shadow: var(--color-shadow-sm);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:not(:checked) {
+    border-color: var(--color-border-default);
+  }
+
+  &:checked {
+    background-color: var(--color-purple-600);
+
+    &::before {
+      left: calc(100% - var(--knob-size) - 1px);
+    }
+
+    &:focus-visible {
+      border-color: var(--color-border-primary);
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba(102, 57, 186, 0.3);
+  }
+}
+
+.switch--sm {
+  --knob-size: 16px;
+  height: 20px;
+  width: 32px;
+
+  &:checked {
+    &::before {
+      left: calc(100% - var(--knob-size));
+    }
+  }
+}
