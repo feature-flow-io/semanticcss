@@ -1,0 +1,75 @@
+@each $breakpoint in map-keys($breakpoints) {
+  $variant: breakpoint-infix($breakpoint);
+
+  @include breakpoint($breakpoint) {
+    .mt-#{$variant}auto {
+      margin-top: auto !important;
+    }
+
+    .mb-#{$variant}auto {
+      margin-bottom: auto !important;
+    }
+
+    .ml-#{$variant}auto,
+    .mx-#{$variant}auto {
+      margin-left: auto !important;
+    }
+
+    .mr-#{$variant}auto,
+    .mx-#{$variant}auto {
+      margin-right: auto !important;
+    }
+
+    @each $scale, $size in $spacer-map {
+      .m-#{$variant}#{$scale} {
+        margin: $size !important;
+      }
+
+      .mt-#{$variant}#{$scale},
+      .my-#{$variant}#{$scale} {
+        margin-top: $size !important;
+      }
+
+      .mb-#{$variant}#{$scale},
+      .my-#{$variant}#{$scale} {
+        margin-bottom: $size !important;
+      }
+
+      .ml-#{$variant}#{$scale},
+      .mx-#{$variant}#{$scale} {
+        margin-left: $size !important;
+      }
+
+      .mr-#{$variant}#{$scale},
+      .mx-#{$variant}#{$scale} {
+        margin-right: $size !important;
+      }
+
+      @if $size != 0 {
+        .-m-#{$variant}#{$scale} {
+          margin: -$size !important;
+        }
+
+        .-mt-#{$variant}#{$scale},
+        .-my-#{$variant}#{$scale} {
+          margin-top: -$size !important;
+        }
+
+        .-mb-#{$variant}#{$scale},
+        .-my-#{$variant}#{$scale} {
+          margin-bottom: -$size !important;
+        }
+
+        .-ml-#{$variant}#{$scale},
+        .-mx-#{$variant}#{$scale} {
+          margin-left: -$size !important;
+        }
+
+        .-mr-#{$variant}#{$scale},
+        .-mx-#{$variant}#{$scale} {
+          margin-right: -$size !important;
+        }
+      }
+    }
+  }
+}
