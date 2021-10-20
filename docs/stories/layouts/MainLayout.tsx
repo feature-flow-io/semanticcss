@@ -2,10 +2,14 @@ import { Sidebar } from '../Sidebar'
 import { Avatar } from '../Avatar'
 import { Icon } from '../../components/Icon'
 
-export const MainLayout = () => {
+interface MainLayoutProps {
+  children?: React.ReactNode
+}
+
+export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="d-flex">
-      <Sidebar itemCount={4} header={true} />
+      <Sidebar itemCount={4} header={true} className="d-none d-lg-flex" />
 
       <div className="flex-1">
         <header className="appbar p--responsive">
@@ -36,6 +40,7 @@ export const MainLayout = () => {
             />
           </div>
         </header>
+        {children}
       </div>
     </div>
   )

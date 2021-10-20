@@ -1,12 +1,14 @@
 import { Icon } from '../components/Icon'
+import { joinClasses } from '../utils'
 
 interface SidebarProps {
   itemCount: number
   header?: boolean
   footer?: boolean
+  className?: string
 }
 
-export const Sidebar = ({ itemCount, header, footer, ...props }: SidebarProps) => {
+export const Sidebar = ({ itemCount, header, footer, className, ...props }: SidebarProps) => {
   const loopTill: Array<number> = []
 
   for (let i = 2; i <= itemCount; i++) {
@@ -14,7 +16,7 @@ export const Sidebar = ({ itemCount, header, footer, ...props }: SidebarProps) =
   }
 
   return (
-    <aside className="sidebar" {...props}>
+    <aside className={joinClasses(['sidebar', className])} {...props}>
       {header && (
         <div className="sidebar-header">
           <button type="button" className="sidebar-item flex-justify-between py-1">
