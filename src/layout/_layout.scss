@@ -1,0 +1,26 @@
+.layout {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: $spacer-3;
+
+  @include breakpoint(xl) {
+    grid-auto-flow: column;
+    grid-gap: $spacer-4;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.layout-sidebar {
+  --layout-sidebar-width: 320px;
+
+  @include breakpoint(xl) {
+    width: var(--layout-sidebar-width);
+    grid-column: 1;
+  }
+}
+
+.layout-main {
+  @include breakpoint(xl) {
+    grid-column: 2 / span 2;
+  }
+}

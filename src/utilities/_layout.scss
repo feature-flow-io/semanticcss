@@ -28,3 +28,8 @@ $position-map: (relative, absolute, static);
 .right-0 {
   right: 0 !important;
 }
+
+// Section
+.section:not(:first-of-type) {
+  margin-top: 40px !important;
+}
