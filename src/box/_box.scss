@@ -1,0 +1,52 @@
+.box {
+  background-color: #fff;
+  border: $border;
+  border-radius: $border-radius;
+}
+
+.box-header {
+  padding: $spacer-3;
+  border-bottom: $border;
+  background-color: var(--color-canvas-muted-light);
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+
+  + .box-row {
+    margin-top: -$border-width;
+  }
+
+  .box-title {
+    font-size: $body-font-size;
+    font-weight: $font-weight-bold;
+  }
+
+  + .box-footer {
+    margin-top: -$border-width;
+  }
+}
+
+.box-body {
+  padding: $spacer-3;
+}
+
+.box-row {
+  padding: $spacer-3;
+  list-style-type: none;
+
+  &:not(:first-of-type) {
+    border-top: $border;
+  }
+}
+
+.box-footer {
+  padding: $spacer-3;
+  background-color: var(--color-canvas-muted-light);
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  border-top: $border;
+}
+
+// Box states
+.box--danger {
+  border-color: var(--color-border-danger);
+}
