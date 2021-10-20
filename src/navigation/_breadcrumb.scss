@@ -1,0 +1,39 @@
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  list-style: none;
+  font-size: $h6-size;
+  line-height: 18px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' height='18' width='18' fill='%2364748b'%3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  }
+
+  a {
+    color: var(--color-fg-muted);
+
+    &:hover {
+      color: var(--color-fg-accent);
+    }
+  }
+}
+
+.breadcrumb-item--active {
+  [aria-current]:not([aria-current='false']) {
+    font-weight: $font-weight-bold;
+    color: var(--color-fg-muted-emphasis);
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &::after {
+    content: none;
+  }
+}
