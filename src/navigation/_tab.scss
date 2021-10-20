@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   overflow-x: auto;
+  border-bottom: $border;
 }
 
 .tab-item {
@@ -10,7 +11,7 @@
   padding: $spacer-2 $spacer-3;
   font-size: $body-font-size;
   line-height: 30px;
-  color: var(--color-fg-default);
+  color: var(--color-fg-muted-emphasis);
   text-align: center;
   white-space: nowrap;
   background-color: transparent;
