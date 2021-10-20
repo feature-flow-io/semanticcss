@@ -1,0 +1,50 @@
+.appbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $size-7;
+  z-index: 32;
+  font-size: $h5-size;
+  line-height: $lh-default;
+  flex-wrap: nowrap;
+  background-color: var(--color-purple-800);
+}
+
+.appbar-item {
+  display: flex;
+  margin-right: $spacer-3;
+  align-self: stretch;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &--full {
+    flex: auto;
+  }
+}
+
+.appbar-link {
+  --color-header-text: var(--color-gray-100);
+  --color-header-text-hover: var(--color-gray-300);
+
+  font-weight: $font-weight-bold;
+  white-space: nowrap;
+  color: var(--color-header-text);
+
+  &:hover,
+  &:focus {
+    color: var(--color-header-text-hover);
+    text-decoration: none;
+  }
+}
+
+.appbar-drawer-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
+    outline: none;
+  }
+}
