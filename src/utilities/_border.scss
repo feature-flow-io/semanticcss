@@ -1,0 +1,21 @@
+@each $breakpoint in map-keys($breakpoints) {
+  $variant: breakpoint-infix($breakpoint);
+
+  @include breakpoint($breakpoint) {
+    .border-#{$variant}top {
+      border-top: $border !important;
+    }
+
+    .border-#{$variant}bottom {
+      border-bottom: $border !important;
+    }
+
+    .border-#{$variant}left {
+      border-left: $border !important;
+    }
+
+    .border-#{$variant}right {
+      border-right: $border !important;
+    }
+  }
+}
