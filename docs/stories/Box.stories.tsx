@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof Box> = (args) => <Box {...args} />
 
 export const Base = Template.bind({})
 Base.args = {
-  rowCount: 0,
+  rowCount: 2,
   scheme: 'default',
   body: true,
   header: true,
