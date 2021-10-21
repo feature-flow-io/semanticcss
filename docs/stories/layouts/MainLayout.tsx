@@ -9,7 +9,7 @@ interface MainLayoutProps {
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="d-flex">
-      <Sidebar itemCount={4} header={true} className="d-none d-lg-flex" />
+      <Sidebar itemCount={4} header={true} />
 
       <div className="flex-1">
         <header className="appbar p--responsive">
