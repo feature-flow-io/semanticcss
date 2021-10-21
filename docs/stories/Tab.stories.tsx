@@ -21,5 +21,5 @@ Base.parameters = {
 Base.args = {
   icon: false,
   counter: false,
-  tabItemCount: 1,
+  tabItemCount: 3,
 }

@@ -15,28 +15,30 @@ export const Tab = ({ icon, counter, tabItemCount, ...props }: TabProps) => {
   }
 
   return (
-    <nav className="tab" {...props}>
-      <button className="tab-item" role="tab" type="button" aria-selected="true">
-        {icon && <Icon className="tab-octicon" />}
-        Item 1
-        {counter && (
-          <span className="tab-counter">
-            <Label text="21" circle={true} />
-          </span>
-        )}
-      </button>
-
-      {loopTill.map((item) => (
-        <button key={item} className="tab-item" role="tab" type="button">
+    <div className="tab">
+      <nav className="tab-container" {...props}>
+        <button className="tab-item" role="tab" type="button" aria-selected="true">
           {icon && <Icon className="tab-octicon" />}
-          Item {item}
+          Item 1
           {counter && (
             <span className="tab-counter">
               <Label text="21" circle={true} />
             </span>
           )}
         </button>
-      ))}
-    </nav>
+
+        {loopTill.map((item) => (
+          <button key={item} className="tab-item" role="tab" type="button">
+            {icon && <Icon className="tab-octicon" />}
+            Item {item}
+            {counter && (
+              <span className="tab-counter">
+                <Label text="21" circle={true} />
+              </span>
+            )}
+          </button>
+        ))}
+      </nav>
+    </div>
   )
 }
