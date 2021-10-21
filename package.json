@@ -6,7 +6,8 @@
   "scripts": {
     "storybook": "cd docs && yarn && yarn storybook",
     "setup": "yarn && cd docs && yarn",
-    "release": "npm pack && npm publish"
+    "release": "npm pack && npm publish",
+    "build": "cd docs && yarn prod"
   },
   "files": [
     "src"
