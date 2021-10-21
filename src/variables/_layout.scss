@@ -55,6 +55,8 @@ $breakpoints: (
 
 // Z-index
 $z-index: (
+  details-overlay: 500,
+  select-menu-overlay: 510,
   dropdown: 600,
   header: 900,
   flash: 910,

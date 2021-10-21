@@ -9,10 +9,6 @@ export default {
 const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />
 
 export const Base = Template.bind({})
-Base.parameters = {
-  layout: 'centered',
-}
-
 Base.args = {
   direction: 'se',
   icon: false,

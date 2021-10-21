@@ -19,7 +19,7 @@ export const SelectMenu = ({ itemSize, position, selected, filter, header, foote
 
   return (
     <div className="d-flex flex-justify-center">
-      <details className="details-reset relative" open>
+      <details className="details-reset details-overlay relative" open>
         <summary className="btn" role="button" aria-haspopup="true">
           Choose an item
         </summary>
