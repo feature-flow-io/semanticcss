@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   height: $size-7;
-  z-index: 32;
+  z-index: z(header);
   font-size: $h5-size;
   line-height: $lh-default;
   flex-wrap: nowrap;
