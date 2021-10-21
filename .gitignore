@@ -36,5 +36,4 @@ docs/.vercel
 node_modules
 
 # ignore build files
-dist/
-build/
+public/

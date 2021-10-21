@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prod": "build-storybook -o ../build"
+    "prod": "build-storybook -o ../public"
   },
   "dependencies": {
     "autoprefixer": "^10.3.7",
