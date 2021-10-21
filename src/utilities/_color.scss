@@ -1,0 +1,62 @@
+// Text colors
+.color-fg-default {
+  color: var(--color-fg-default) !important;
+}
+
+.color-fg-default-inverse {
+  color: var(--color-fg-default-inverse) !important;
+}
+
+.color-fg-accent {
+  color: var(--color-fg-accent) !important;
+}
+
+.color-fg-muted {
+  color: var(--color-fg-muted) !important;
+}
+
+.color-fg-muted-emphasis {
+  color: var(--color-fg-muted-emphasis) !important;
+}
+
+// Background colors
+.color-canvas-default {
+  background-color: var(--color-canvas-default) !important;
+}
+
+.color-canvas-muted-light {
+  background-color: var(--color-canvas-muted-light) !important;
+}
+
+.color-canvas-muted {
+  background-color: var(--color-canvas-muted) !important;
+}
+
+.color-canvas-muted-emphasis {
+  background-color: var(--color-canvas-muted-emphasis) !important;
+}
+
+.color-canvas-overlay {
+  background-color: var(--color-canvas--overlay) !important;
+}
+
+.color-canvas-default-inverse {
+  background-color: var(--color-canvas-default-inverse) !important;
+}
+
+// Border colors
+.color-border-default {
+  border-color: var(--color-border-default) !important;
+}
+
+.color-border-primary {
+  border-color: var(--color-border-primary) !important;
+}
+
+.color-border-success {
+  border-color: var(--color-border-success) !important;
+}
+
+.color-border-danger {
+  border-color: var(--color-border-danger) !important;
+}
