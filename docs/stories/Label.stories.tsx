@@ -13,4 +13,5 @@ Base.args = {
   text: 'Label',
   scheme: 'default',
   circle: false,
+  dismissable: false,
 }
