@@ -1,11 +1,8 @@
 .sidebar-overlay {
   background-color: var(--color-canvas-overlay);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 33;
+  z-index: z(sidebar-overlay);
+  @include inset-0;
 
   @include breakpoint(lg) {
     display: none;
@@ -26,7 +23,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 34;
+  z-index: z(sidebar);
 
   hr,
   .sidebar-item-separator {

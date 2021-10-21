@@ -18,6 +18,7 @@ Base.args = {
   itemCount: 4,
   header: true,
   footer: false,
+  className: '',
 }
 
 Base.parameters = {

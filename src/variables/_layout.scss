@@ -52,3 +52,13 @@ $breakpoints: (
   lg: 1012px,
   xl: 1280px,
 );
+
+// Z-index
+$z-index: (
+  dropdown: 600,
+  header: 900,
+  flash: 910,
+  sidebar-overlay: 950,
+  sidebar: 1000,
+  toast: 1100,
+);

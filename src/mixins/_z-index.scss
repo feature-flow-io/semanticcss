@@ -1,0 +1,10 @@
+@function z($value, $z: $z-index) {
+  @if map-has-key($z, $value) {
+    @return map-get($z, $value);
+  }
+  //Warn if no value is present
+  @else {
+    @error "No value is present in the `#{$z}`";
+  }
+  @return null;
+}

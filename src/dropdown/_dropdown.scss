@@ -21,7 +21,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 100;
+  z-index: z(dropdown);
   width: 220px;
   padding: $spacer-1 0;
   border-radius: $border-radius;

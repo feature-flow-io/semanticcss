@@ -13,6 +13,7 @@
   box-shadow: var(--color-shadow-lg);
   width: 100%;
   max-width: 96vw;
+  z-index: z(toast);
 
   @include breakpoint(sm) {
     max-width: 376px;
