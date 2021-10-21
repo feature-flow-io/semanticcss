@@ -57,18 +57,18 @@
 @keyframes toast--animate-in {
   0% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translate(-50%, 100%);
   }
 }
 
 .toast--animate-out {
-  animation: Toast--animate-out 0.18s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+  animation: toast--animate-out 0.18s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
 }
 
 @keyframes toast--animate-out {
   100% {
     pointer-events: none;
     opacity: 0;
-    transform: translateY(100%);
+    transform: translate(-50%, 100%);
   }
 }
