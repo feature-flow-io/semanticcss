@@ -1,0 +1,25 @@
+.btn-octicon {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  line-height: $lh-condensed-ultra;
+  color: var(--color-fg-muted);
+  vertical-align: middle;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+
+  &:hover {
+    color: var(--color-fg-accent);
+  }
+
+  &.disabled,
+  &[aria-disabled='true'] {
+    color: var(--color-gray-400);
+    cursor: default;
+
+    &:hover {
+      color: var(--color-gray-400);
+    }
+  }
+}
