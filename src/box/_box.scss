@@ -15,14 +15,14 @@
     margin-top: -$border-width;
   }
 
-  .box-title {
-    font-size: $body-font-size;
-    font-weight: $font-weight-bold;
-  }
-
   + .box-footer {
     margin-top: -$border-width;
   }
+}
+
+.box-title {
+  font-size: $body-font-size;
+  font-weight: $font-weight-bold;
 }
 
 .box-body {
@@ -49,4 +49,11 @@
 // Box states
 .box--danger {
   border-color: var(--color-border-danger);
+}
+
+// Button icon
+.box-btn-octicon.btn-octicon {
+  padding: $spacer-3 $spacer-3;
+  margin: (-$spacer-3) (-$spacer-3);
+  line-height: $lh-default;
 }
