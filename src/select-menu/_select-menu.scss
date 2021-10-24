@@ -137,8 +137,10 @@ $select-menu-height: 376px !default;
   background-color: #fff;
   border: 0;
   border-bottom: $border-width $border-style var(--color-border-default);
+  outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-canvas-muted);
     text-decoration: none;
   }
