@@ -1,0 +1,45 @@
+$modal-max-height: 80vh;
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin: 10vh auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1100;
+  max-height: $modal-max-height;
+  max-width: 90vw;
+  width: 100%;
+  animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+
+  @include breakpoint(sm) {
+    max-width: 448px;
+  }
+}
+
+.modal--lg {
+  @include breakpoint(sm) {
+    max-width: 42rem;
+  }
+}
+
+.modal--overflow {
+  max-height: $modal-max-height;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
