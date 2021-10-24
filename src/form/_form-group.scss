@@ -45,3 +45,14 @@
   display: block;
   font-weight: $font-weight-normal;
 }
+
+// Normally used on form button parent container
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .btn + .btn {
+    margin-left: $spacer-2;
+  }
+}
