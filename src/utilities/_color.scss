@@ -19,6 +19,10 @@
   color: var(--color-fg-muted-emphasis) !important;
 }
 
+.color-fg-danger {
+  color: var(--color-red-500) !important;
+}
+
 // Background colors
 .color-canvas-default {
   background-color: var(--color-canvas-default) !important;
@@ -34,6 +38,10 @@
 
 .color-canvas-muted-emphasis {
   background-color: var(--color-canvas-muted-emphasis) !important;
+}
+
+.color-canvas-success-emphasis {
+  background-color: var(--color-green-500) !important;
 }
 
 .color-canvas-overlay {
