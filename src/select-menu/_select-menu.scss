@@ -140,6 +140,7 @@ $select-menu-height: 376px !default;
 
   &:hover {
     background-color: var(--color-canvas-muted);
+    text-decoration: none;
   }
 
   @include breakpoint(sm) {
