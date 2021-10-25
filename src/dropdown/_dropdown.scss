@@ -52,7 +52,8 @@
   color: var(--color-fg-default);
 
   &:hover,
-  &:focus {
+  &:focus,
+  [open] > & {
     text-decoration: none;
     outline: none;
     background-color: var(--color-canvas-muted);
