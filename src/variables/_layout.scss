@@ -55,13 +55,13 @@ $breakpoints: (
 
 // Z-index
 $z-index: (
+  header: 80,
+  sidebar-overlay: 95,
+  sidebar: 99,
   details-overlay: 500,
   select-menu-overlay: 510,
   dropdown: 600,
-  header: 900,
   flash: 910,
-  sidebar-overlay: 950,
-  sidebar: 1000,
   details-overlay-dark: 1050,
   toast: 1100,
 );
