@@ -30,9 +30,5 @@
   "dependencies": {},
   "publishConfig": {
     "access": "public"
-  },
-  "engines": {
-    "yarn": "^1.22.15",
-    "node": "^14.18.1"
   }
 }
